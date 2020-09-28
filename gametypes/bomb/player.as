@@ -375,7 +375,7 @@ class cPlayer
         }
     }
 
-	void selectWeapon( String &weapon )
+	void selectWeapon( const String &weapon )
 	{
 		String token;
 		int len;

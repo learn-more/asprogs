@@ -259,7 +259,7 @@ class cPlayer
         assignClass( class_tag );
     }
 
-    bool setPlayerClass( String @className )
+    bool setPlayerClass( const String &className )
     {
         bool success = false;
 
@@ -288,7 +288,7 @@ class cPlayer
         playerClasses[client.playerNum] = classTag;
     }
 
-    void setPlayerClassCommand( String &argsString )
+    void setPlayerClassCommand( const String &argsString )
     {
         String token = argsString.getToken( 0 );
 
@@ -442,7 +442,7 @@ class cPlayer
                 }
 
                 Vec3 lookAngles, lookOrigin;
-                visible = CTFT_LookAtEntity( this.reviver.ent.origin, Vec3(0.0), this.deadcamMedic.ent, this.ent.entNum, true, 72, 32, lookOrigin, lookAngles );
+                visible = CTFT_LookAtEntity( this.reviver.ent.origin, Vec3(), this.deadcamMedic.ent, this.ent.entNum, true, 72, 32, lookOrigin, lookAngles );
 
                 this.ent.origin = lookOrigin;
                 this.ent.origin2 = lookOrigin;

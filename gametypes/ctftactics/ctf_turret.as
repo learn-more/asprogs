@@ -373,8 +373,8 @@ class cTurret
             // check if the player is visible from the turret
             target.getSize( mins, maxs );
             center = target.origin + ( 0.5 * ( maxs + mins ) );
-            mins = 0;
-            maxs = 0;
+            mins = Vec3();
+            maxs = Vec3();
 
             if ( !tr.doTrace( origin, mins, maxs, center, target.entNum, MASK_SOLID ) )
             {
